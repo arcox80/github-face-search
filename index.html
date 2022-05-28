@@ -24,11 +24,11 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-6 offset-md-3">
           <h1>GitHub Face Search</h1>
 
           <hr />
-          <div class="faces"></div>
+          <div class="faces row"></div>
 
           <form class="search-form">
             <h3>Search a Face</h3>
@@ -45,8 +45,11 @@
         </div>
       </div>
     </div>
-    <script id="face-template" type="text/x-handlebars-template">
-      <div class="book col-md-6"></div>
+    <script id="faces-template" type="text/x-handlebars-template">
+      <div class="face col-md-4">
+        <h3>Login: {{login}}</h3>
+        <img src="{{avatar_url}}" alt="Picture of {{login}}" />
+      </div>
     </script>
   </body>
 </html>
